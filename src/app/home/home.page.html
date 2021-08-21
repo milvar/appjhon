@@ -1,0 +1,27 @@
+<ion-header class="headerapp" [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center" >
+     
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="menu-header-bg">Menu</div>
+  <div class="header-content">
+      <img src=" {{logo}}">
+      <ion-label>
+          <h2> {{titulo}}</h2>
+          <p></p>
+      </ion-label>
+  </div>
+  <ion-list class="menu-items" *ngFor="let page of this.idio">
+          <ion-item routerLink="{{page.url}}">
+              <ion-icon name="{{page.icono}}" ></ion-icon> {{page.titulo}}
+          </ion-item>
+  </ion-list>
+
+
+</ion-content>
+
+

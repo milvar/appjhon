@@ -1,0 +1,40 @@
+<ion-header class="headerapp" [translucent]="true">
+  <ion-toolbar>
+      <ion-title class="ion-text-center">
+          Resultados
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="data[0]['campos'] != null">
+  <ion-card class="data01" *ngFor="let caraac2 of data[0]['campos']">
+      <ion-item class="ion-activated">
+         <div class="list card">
+
+          <div class="item item-avatar">
+            
+            <h2> Activo en Operacion  {{caraac2.activos}}</h2>
+           
+          </div>
+        
+          <div class="item item-body">
+            
+            <p><span>Marco de Tiempo</span>  : {{caraac2.tiempo}}</p>
+            <p><span>Inicio Operacion</span>  : {{caraac2.tiempoini}}</p>
+            <p><span>Final Operacion</span>  : {{caraac2.tiempofin}}</p>
+          <div class="contprioritario">
+              <p>prioridad  <br><strong>{{caraac2.prioridas}}</strong> </p>
+              <p>Accion   <br><strong>{{caraac2.accion}}</strong></p>
+          </div>
+
+            <p class="contensub">
+              <ion-button (click)="cerrarOperacion(caraac2.id)" style="width: 100%;" expand="full" type="submit" name="envio">{{caraac2.mensaje}}</ion-button>
+            </p>
+          </div>
+        
+        </div>
+      
+      </ion-item>
+  </ion-card>
+</ion-content>
+<app-menubajo></app-menubajo>

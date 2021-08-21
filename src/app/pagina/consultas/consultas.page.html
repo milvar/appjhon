@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center" >Consultas</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <form style="width: 90%; margin: 1em auto;" #formulario01="ngForm" (ngSubmit)="consultar()">
+    <ion-list>
+      <ion-item>
+      <ion-label position="floating">Activos Financieros : </ion-label>
+      <ion-input type="text" name="activos" [(ngModel)]="consulta.activos" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Valor Inicio : </ion-label>
+        <ion-input type="text" name="activos" [(ngModel)]="consulta.valini" required></ion-input>
+        </ion-item>
+      <ion-item>
+      <ion-label position="floating">Marco Horario : </ion-label>
+      <ion-select (ionChange)="onSelectChange2($event)" name="tiempo" multiple="false" required> 
+      <ion-select-option *ngFor="let tiem1 of tiempo" value="{{tiem1.id}}-{{tiem1.valor}}">{{tiem1.tiempo}}</ion-select-option>
+      </ion-select>
+      </ion-item>
+      <ion-item>
+      <ion-label position="floating">Tendencia : </ion-label>
+      <ion-select name="data1" id="tenden" multiple="false" (ionChange)="onSelectChange($event)" required> 
+      <ion-select-option *ngFor="let caraac1 of ten" value="{{caraac1.id}}">{{caraac1.texto}}</ion-select-option>
+      </ion-select>
+      </ion-item>
+      <ion-item>
+      <ion-label position="floating">Localización : </ion-label>
+      <ion-select (ionChange)="onSelectChange1($event)" name="data3" multiple="false">
+      <ion-select-option *ngFor="let caraac2 of loc1" value="{{caraac2.id}}">{{caraac2.texto}}</ion-select-option>
+      </ion-select>
+      </ion-item>
+      <ion-item>
+      <ion-label position="floating">Contexto : </ion-label>
+      <ion-select  name="data4" multiple="false">
+      <ion-select-option *ngFor="let cara1 of cont1" value="{{cara1.id}}">{{cara1.texto}}</ion-select-option>
+      </ion-select>
+      </ion-item>    
+    </ion-list>
+    <ion-item>
+      <ion-button style="width: 100%;" expand="full" type="submit" name="envio" [disabled]="formulario01.invalid">Activar Cuenta</ion-button>
+    </ion-item>
+  </form>
+</ion-content>
+<app-menubajo></app-menubajo>

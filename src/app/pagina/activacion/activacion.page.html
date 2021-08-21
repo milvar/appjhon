@@ -1,0 +1,38 @@
+<ion-header class=”Primary”>
+  <ion-toolbar>
+    <ion-title class="ion-text-center" >Activacion de Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form style="width: 80%; margin: 1em auto;" #formulario="ngForm" (ngSubmit)="activar()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nombres</ion-label>
+        <ion-input type="text" name="nombres" pattern="[a-zA-Z]{3,50}" [(ngModel)]="activa.nombres" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">apellidos</ion-label>
+        <ion-input type="text" name="apellidos" pattern="[a-zA-Z]{3,50}" [(ngModel)]="activa.apellidos" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">correo</ion-label>
+        <ion-input type="email" name="correo" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" [(ngModel)]="activa.correo" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input name="activacion" type="password" [(ngModel)]="activa.activacion" required></ion-input>
+      </ion-item>
+    <ion-radio-group type="boolean" name="termino" [(ngModel)]="activa.termino">
+      <ion-item>
+        <ion-label>terminos y condiciones</ion-label>
+        <ion-radio slot="start" value="1"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    </ion-list>
+    <ion-item>
+      <ion-button style="width: 100%;" expand="full" type="submit" name="envio" [disabled]="formulario.invalid">Activar Cuenta</ion-button>
+    </ion-item>
+  </form>
+</ion-content>
+<app-menubajo></app-menubajo>

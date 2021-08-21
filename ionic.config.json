@@ -1,0 +1,7 @@
+{
+  "name": "apptdi.1.04",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

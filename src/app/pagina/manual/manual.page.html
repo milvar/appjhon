@@ -1,0 +1,84 @@
+<ion-header class=”Primary”>
+  <ion-toolbar>
+      <ion-title class="ion-text-center">manual</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngFor="let page of this.data">
+  <div class="contenidomanual">
+      <h1>{{page.titulo}}</h1>
+      <h2>{{page.titulointro}}</h2>
+      <p>{{page.intro}}</p>
+      <h2>{{page.tituloobjetivo}}</h2>
+      <p>{{page.objetivo}}</p>
+      <h2>{{page.tituloprocesotdi}}</h2>
+      <p>{{page.proceso}}</p>
+      <div class="contenidomanualimagen">
+          <img src="{{page.imagenes1}}" alt="nombre">
+      </div>
+      <h2>{{page.titulotendencia}}</h2>
+      <p>{{page.tendencia}}</p>
+      <div class="contenidomanualimagen">
+          <img src="{{page.imagenes2}}" alt="nombre">
+      </div>
+      <h2>{{page.tituloalcista}}</h2>
+      <p>{{page.alcista}}</p>
+      <div class="contenidomanualimagen">
+          <img src="{{page.imagenes3}}" alt="nombre">
+      </div>
+      <h2>{{page.titulobajista}}</h2>
+      <p>{{page.bajista}}</p>
+      <div class="contenidomanualimagen">
+          <img src="{{page.imagenes4}}" alt="nombre">
+      </div>
+      <h2>{{page.titulolateral}}</h2>
+      <p>{{page.lateral}}</p>
+      <div class="contenidomanualimagen">
+          <img src="{{page.imagenes5}}" alt="nombre">
+      </div>
+      <p>{{page.lateralb}}</p>
+      <div class="contenidomanualimagen">
+          <img src="{{page.imagenes6}}" alt="nombre">
+      </div>
+      <p>{{page.lateralc}}</p>
+      <h2>{{page.titulolocaliza}}</h2>
+      <p>{{page.localiza}}</p>
+      <div class="contenidomanualimagen">
+          <img src="{{page.imagenes7}}" alt="nombre">
+      </div>
+      <p>{{page.localizab}}</p>
+      <h2>{{page.titulolocalizac}}</h2>
+      <p>{{page.localizac}}</p>
+      <div class="contenidomanualimagen">
+          <img src="{{page.imagenes8}}" alt="nombre">
+      </div>
+      <p>{{page.localizad}}</p>
+      <div class="contenidomanualimagen">
+          <img src="{{page.imagenes9}}" alt="nombre">
+      </div>
+      <p>{{page.localizae}}</p>
+      <div class="contenidomanualimagen">
+          <img src="{{page.imagenes10}}" alt="nombre">
+      </div>
+      <p>{{page.localizaf}}</p>
+      <div class="contenidomanualimagen">
+          <img src="{{page.imagenes11}}" alt="nombre">
+      </div>
+      <p>{{page.vacio}}</p>
+      <h2>{{page.titulocontexto}}</h2>
+      <p>{{page.contexto}}</p>
+      <p>{{page.contextoa}}</p>
+      <h2>{{page.titulocontextob}}</h2>
+      <p>{{page.contextob}}</p>
+      <p>{{page.contextoc}}</p>
+      <p>{{page.nota}}</p>
+      <h2>{{page.tituloglosario}}</h2>
+      <p>{{page.glosario}}</p>
+      <h2>{{page.tituloconclusion}}</h2>
+      <p>{{page.conclusion}}</p>
+      <h2>{{page.titulofinal}}</h2>
+      <p>{{page.final}}</p>
+      <h2 class="autor">{{page.autor}}</h2>
+  </div>
+</ion-content>
+<app-menubajo></app-menubajo>

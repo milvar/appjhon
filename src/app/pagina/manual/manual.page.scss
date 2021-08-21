@@ -1,0 +1,40 @@
+.contenidomanual {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0.5em;
+}
+
+.contenidomanual h1 {
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: 600;
+}
+
+.contenidomanual h2 {
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: 600;
+}
+
+.contenidomanual .autor h2 {
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 4em;
+}
+
+.contenidomanual p {
+    font-size: 0.8em;
+    text-align: justify;
+    font-weight: 600;
+    margin: 0.6em;
+    color: rgb(60, 60, 63);
+}
+
+ion-header{
+    --ion-background-color:#6080d6;
+    
+    }
+    ion-title{
+        color: rgb(245, 239, 239) !important;
+        font-weight: bolder;
+    }
